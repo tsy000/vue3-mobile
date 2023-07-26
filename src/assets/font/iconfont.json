@@ -1,0 +1,51 @@
+{
+  "id": "4176743",
+  "name": "wms-app",
+  "font_family": "iconfont",
+  "css_prefix_text": "wmsicon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1883246",
+      "name": "拣货单",
+      "font_class": "pickinglist",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "6297001",
+      "name": "新出库",
+      "font_class": "xinchuku",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "6297003",
+      "name": "新入库",
+      "font_class": "xinruku",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "24271989",
+      "name": "出库单",
+      "font_class": "chukudan",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "24271991",
+      "name": "入库单",
+      "font_class": "rukudan",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "26694827",
+      "name": "派车送货单",
+      "font_class": "paichesonghuodan",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    }
+  ]
+}
