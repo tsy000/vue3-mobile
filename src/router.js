@@ -134,13 +134,14 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const token = sStorage.get('token');
+  // 如果没有token 去登录页
+  // const token = sStorage.get('token');
   const title = to.meta && to.meta.title;
-  if(to.name !== 'login' && !token){
-    showToast('请先登录')
-    sStorage.clear();
-    router.push('/login');
-  }
+  // if(to.name !== 'login' && !token){
+  //   showToast('请先登录')
+  //   sStorage.clear();
+  //   router.push('/login');
+  // }
   if (title) {
     document.title = title;
   }

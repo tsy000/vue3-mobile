@@ -47,25 +47,26 @@ async function onSubmit  (value) {
     showToast('密码不能为空');
     return;
   }
+  router.push('/home')
   
 
-  const encryptor = new JSEncrypt();
-  const pubKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMQY3f3lq5HICHtmOD/gJqFXXGJHJOzmpGyKtjsLlFr1QokCyI6dRHftq8YX3h5l4NLEGSfXZFcRWJO7hgvOWcUCAwEAAQ=='
-  encryptor.setPublicKey(pubKey)//设置公钥
-  const rsaPassWord = encryptor.encrypt(psw) 
-  const loginUser = name + '@deepway.ai';
+  // const encryptor = new JSEncrypt();
+  // const pubKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMQY3f3lq5HICHtmOD/gJqFXXGJHJOzmpGyKtjsLlFr1QokCyI6dRHftq8YX3h5l4NLEGSfXZFcRWJO7hgvOWcUCAwEAAQ=='
+  // encryptor.setPublicKey(pubKey)//设置公钥
+  // const rsaPassWord = encryptor.encrypt(psw) 
+  // const loginUser = name + '@deepway.ai';
   
-  const con = await api.pwdLogin({loginUser, password: rsaPassWord});
+  // const con = await api.pwdLogin({loginUser, password: rsaPassWord});
  
-  if(con.code === '00000'){
-    showSuccessToast('登录成功');
-    sStorage.set('token', con.data.token)
-    router.push('/home')
-    setTimeout(async() => {
-      const res = await api.getUserDetail();
-      if(res.code == '00000') sStorage.set('userInfo', con.data);
-    }, 500)
-  }
+  // if(con.code === '00000'){
+  //   showSuccessToast('登录成功');
+  //   sStorage.set('token', con.data.token)
+  //   router.push('/home')
+  //   setTimeout(async() => {
+  //     const res = await api.getUserDetail();
+  //     if(res.code == '00000') sStorage.set('userInfo', con.data);
+  //   }, 500)
+  // }
 }
 console.log(api);
 </script>
